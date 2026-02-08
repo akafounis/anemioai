@@ -28,12 +28,16 @@
             box-sizing: border-box;
         }
         
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
         body {
             font-family: 'Outfit', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
         }
         
         /* Animated mesh background */
@@ -60,7 +64,7 @@
         
         /* Header */
         header {
-            /*position: fixed;*/
+            position: fixed;
             top: 0;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
@@ -73,19 +77,20 @@
         nav {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.03em;
+            flex-shrink: 0;
         }
         
         .nav-links {
@@ -124,13 +129,15 @@
         
         .nav-cta {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
-            padding: 0.875rem 2rem;
+            padding: 0.75rem 1.5rem;
             border-radius: 12px;
             text-decoration: none;
             color: white;
             font-weight: 700;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
             box-shadow: 0 4px 16px rgba(14, 165, 233, 0.3);
+            flex-shrink: 0;
+            white-space: nowrap;
         }
         
         .nav-cta:hover {
@@ -143,6 +150,8 @@
             padding: 10rem 3rem 6rem;
             position: relative;
             background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
+            overflow: hidden;
+            width: 100%;
         }
         
         .hero::after {
@@ -800,29 +809,29 @@
         }
         
         @media (max-width: 768px) {
-            header {
-                padding: 1rem 0;
-            }
-            
-            nav {
-                padding: 0 1.25rem;
-                gap: 1rem;
-            }
-            
-            .logo {
-                font-size: 1.25rem;
-                flex-shrink: 0;
-            }
-            
             .nav-links {
                 display: none;
             }
             
+            .logo {
+                font-size: 1.25rem;
+            }
+            
             .nav-cta {
-                padding: 0.625rem 1.25rem;
-                font-size: 0.8125rem;
-                white-space: nowrap;
-                flex-shrink: 0;
+                padding: 0.65rem 1.25rem;
+                font-size: 0.875rem;
+            }
+            
+            nav {
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                padding: 8rem 1rem 4rem;
+            }
+            
+            .hero-content {
+                max-width: 100%;
             }
             
             h1 {
@@ -865,11 +874,11 @@
             .features,
             .tech,
             .use-cases {
-                padding: 4rem 1.5rem;
+                padding: 4rem 1rem;
             }
             
             .cta {
-                padding: 5rem 1.5rem;
+                padding: 5rem 1rem;
             }
             
             .section-header {
@@ -958,13 +967,13 @@
             }
             
             footer {
-                padding: 3rem 1.5rem 2rem;
+                padding: 3rem 1rem 2rem;
             }
         }
         
         @media (max-width: 480px) {
             nav {
-                padding: 0 1rem;
+                padding: 0 0.75rem;
             }
             
             .logo {
@@ -985,7 +994,7 @@
             }
             
             .hero {
-                padding: 7rem 1.25rem 3rem;
+                padding: 7rem 0.75rem 3rem;
             }
             
             .hero p {
@@ -999,15 +1008,19 @@
             .features,
             .tech,
             .use-cases {
-                padding: 3rem 1.25rem;
+                padding: 3rem 0.75rem;
             }
             
             .cta {
-                padding: 4rem 1.25rem;
+                padding: 4rem 0.75rem;
             }
             
             .cta h2 {
                 font-size: 2rem;
+            }
+            
+            footer {
+                padding: 3rem 0.75rem 2rem;
             }
         }
     </style>
@@ -1038,7 +1051,7 @@
                     <div class="stat-label">Forecast Granularity</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value">>90%</div>
+                    <div class="stat-value">96.2%</div>
                     <div class="stat-label">Prediction Accuracy</div>
                 </div>
                 <div class="stat-card">
@@ -1178,8 +1191,8 @@
             <h2>Gain the Trading Edge</h2>
             <p>Join leading energy trading desks who rely on Anemio AI for superior renewable energy forecasts and competitive advantage.</p>
             <div class="cta-buttons">
-                <a href="mailto:contact@anemio.com" class="btn-primary">Schedule a Demo</a>
-                <a href="mailto:info@anemio.com" class="btn-secondary">Contact Sales</a>
+                <a href="/cdn-cgi/l/email-protection#6e0d01001a0f0d1a2e0f000b030701400d0103" class="btn-primary">Schedule a Demo</a>
+                <a href="/cdn-cgi/l/email-protection#2f464149406f4e414a424640014c4042" class="btn-secondary">Contact Sales</a>
             </div>
         </div>
     </section>
@@ -1223,8 +1236,4 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 Anemio AI. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+            <p>&copy; 2026 A
